@@ -15,14 +15,16 @@ export const getEmployees = async(req, res) => {
 }
 
 export const getEmployee = async(req, res) => {
+    console.log(req.params.id)
+    const Errormessage = 'Error in getEmployee # ' + req.params.id
     try {
-        console.log(req.params.id)
+        throw new error('DB Error')
         const [rows] = await pool.query('SELECT * FROM employee WHERE id = ?', [req.params.id]);
         if (rows.length <= 0) return res.status(404).json({message: 'Employee not found'})
     res.send(rows[0])
     } catch (error) {
         return res.status(500).json({
-            message: 'Error in getEmployee'
+            message: Errormessage
         })
     }
 
@@ -36,8 +38,9 @@ export const getEmployee = async(req, res) => {
  
 /*export const createEmployee = (req, res) => res.send('creando empleados')*/
 export const createEmployee = async(req, res) => {
+    const {name, salary} = req.body;
     try {
-        const {name, salary} = req.body;
+        
         //Aqui se puede validar que el dato es string, y e salario un entero
         const [rows] = await pool.query('INSERT INTO employee(name, salary) VALUES (?, ?)', [name, salary])
         
