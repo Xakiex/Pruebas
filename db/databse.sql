@@ -41,7 +41,14 @@ INSERT INTO employee VALUES
     (4, 'Max', 1500);
 
 INSERT INTO cita VALUES 
-    (1, '3115454', 'joe', '2/2/2023', 'Doc Sam', 'C01', 'agendado', 'nota 1'),
-    (2, '3115454', 'Henry', '2/2/2023', 'Doc Sam', 'C01', 'agendado', 'nota 1'),
-    (3, '3115454', 'Sam', '2/2/2023', 'Doc Sam', 'C01', 'agendado', 'nota 1'),
-    (4, '3125454', 'Max', '2/2/2023', 'Doc Sam', 'C01', 'agendado', 'nota 1');
+    (1, '3115454', 'joe', '2023-07-15 01:04:28', 'Doc Sam', 'C01', 'agendado', 'nota 1'),
+    (2, '3115454', 'Henry', '2023-07-15 01:04:28', 'Doc Sam', 'C01', 'agendado', 'nota 1'),
+    (3, '3115454', 'Sam', '2023-07-15 01:04:28', 'Doc Sam', 'C01', 'agendado', 'nota 1'),
+    (4, '3125454', 'Max', '2023-07-15 01:04:28', 'Doc Sam', 'C01', 'agendado', 'nota 1');
+
+INSERT INTO usuario VALUES 
+    (1088, 'Miguel', 'D.', 'Parra', 'Urrutia', 'Admin', '123'),
+    (42068, 'Nancy', 'D.', 'Patiño', 'Urrutia', 'Odontóloga', '123'),
+    (1, 'Jessica', 'D.', 'Suarez', 'Urrutia', 'Auxiliar', '123'),
+    (2, 'Laura', 'D.', 'Patiño', 'Urrutia', 'Odontóloga', '123');
+
