@@ -4,3 +4,6 @@ import {PORT} from './config.js'
 
 app.listen(PORT);
 console.log("server runing on port:", PORT);
+
+
+//npm run dev

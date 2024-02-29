@@ -18,7 +18,7 @@ export const getEmployee = async(req, res) => {
     console.log(req.params.id)
     const Errormessage = 'Error in getEmployee # ' + req.params.id
     try {
-        throw new error('DB Error')
+        //throw new error('DB Error')
         const [rows] = await pool.query('SELECT * FROM employee WHERE id = ?', [req.params.id]);
         if (rows.length <= 0) return res.status(404).json({message: 'Employee not found'})
     res.send(rows[0])
